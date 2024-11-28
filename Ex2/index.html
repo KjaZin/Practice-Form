@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;  
+        }
+        .form-container {
+            box-sizing: border-box;
+            width: 80vw;
+            height: auto;
+            background-color: rgba(43, 198, 226, 0.808);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-width: 350px;
+            gap: 20px;
+            padding: 10px;
+        }
+        .form-header {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.4rem;
+        }
+        .email, .bio {
+            grid-column: 1 / -1;
+        }
+        input, select, textarea {
+            width: 100%;
+            font-size: larger;
+        }
+        .inline-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+        }
+        .inline-group label {
+            margin: 0;
+        }
+        .inline-group input[type="radio"],
+        .inline-group input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .inline-field {
+            display: flex;
+            align-items: start;
+        }
+        .inline-field label {
+            margin: 0;
+        }
+        .inline-field input[type="radio"],
+        .inline-field input[type="checkbox"] {
+            margin-right: 0px;
+        }
+        .sub-btn {
+            display: flex;
+            justify-self: center;
+            grid-column: 2 / 3;
+            margin-left: 60%;
+        }
+    </style>
+</head>
+<body>
+    <form class="form-container">
+        <div class="form-header"><b>Create Account</b></div>
+        <div class="first-name">
+            <label for="first-name">First Name</label><br>
+            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+        </div>
+        <div class="last-name">
+            <label for="last-name">Last Name</label><br>
+            <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+        </div>
+        <div class="email">
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="password">
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="confirm-password">
+            <label for="confirm-password">Confirm Password</label><br>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+        </div>
+        <div class="gender inline-field">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div class="hobbies inline-field">
+            <label>Hobbies:</label>
+            <input type="checkbox" id="checkbox1" name="hobbies" value="music">
+            <label for="checkbox1">Music</label>
+            <input type="checkbox" id="checkbox2" name="hobbies" value="sports">
+            <label for="checkbox2">Sports</label>
+            <input type="checkbox" id="checkbox3" name="hobbies" value="travel">
+            <label for="checkbox3">Travel</label>
+            <input type="checkbox" id="checkbox4" name="hobbies" value="movies">
+            <label for="checkbox4">Movies</label>
+        </div>
+        <div class="income">
+            <label for="income">Source of Income</label><br>
+            <select name="income" id="income" required>
+                <option value="employed">Employed</option>
+                <option value="teacher">Teacher</option>
+                <option value="designer">Designer</option>
+                <option value="developer">Developer</option>
+            </select>
+        </div>
+        <div class="amount">
+            <label for="money-income">Income</label>
+            <input type="range" min="10k" max="100k">
+        </div>
+        <div class="file">
+            <label for="profile-pic">Upload Profile Picture</label>
+            <input type="file">
+        </div>
+        <div class="age">
+            <label for="age">Age</label><br>
+            <input type="number" id="age" name="age" min="1" max="120" placeholder="Enter your age" required>
+        </div>
+        <div class="bio">
+            <label for="bio">Bio</label><br>
+            <textarea name="bio" id="bio" rows="3" cols="50" placeholder="Tell us about yourself"></textarea>
+        </div>
+        <div class="sub-btn">
+            <input type="submit" value="Create">
+        </div>
+    </form>
+</body>
+</html>

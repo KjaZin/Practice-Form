@@ -1,0 +1,21 @@
+#name:focus {
+    background-color: blue;
+    color: greenyellow;
+}
+#name:hover {
+    background-color: #f62323;
+}
+#search {
+    border: 1px solid #040404;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #c4c4f4;
+}
+#check1 {
+    accent-color: green;
+}
+#check2 {
+    accent-color: red;
+}
+#check3 {
+    accent-color: yellow;
+}
